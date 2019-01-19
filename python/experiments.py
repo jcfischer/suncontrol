@@ -34,20 +34,19 @@ except ImportError:
 import opc
 import color_utils
 
-
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # command line
 
 parser = optparse.OptionParser()
 parser.add_option('-l', '--layout', dest='layout',
-                    action='store', type='string',
-                    help='layout file')
+                  action='store', type='string',
+                  help='layout file')
 parser.add_option('-s', '--server', dest='server', default='127.0.0.1:7890',
-                    action='store', type='string',
-                    help='ip and port of server')
+                  action='store', type='string',
+                  help='ip and port of server')
 parser.add_option('-f', '--fps', dest='fps', default=20,
-                    action='store', type='int',
-                    help='frames per second')
+                  action='store', type='int',
+                  help='frames per second')
 
 options, args = parser.parse_args()
 
@@ -58,8 +57,7 @@ if not options.layout:
     print()
     sys.exit(1)
 
-
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # parse layout file
 
 print
@@ -72,8 +70,7 @@ for item in json.load(open(options.layout)):
     if item and 'point' in item:
         coordinates.append(tuple(item['point']))
 
-
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # connect to server
 
 client = opc.Client(options.server)
@@ -85,9 +82,7 @@ else:
 print
 
 
-#-------------------------------------------------------------------------------
-
-
+# -------------------------------------------------------------------------------
 
 
 def update_world(t, world):
@@ -103,7 +98,7 @@ def update_world(t, world):
     for obj in objs:
         obj.move(delta_t)
 
-    new_objects = list(filter(lambda x : x.alive, objs))
+    new_objects = list(filter(lambda x: x.alive, objs))
     if random.random() > 0.98:
         new_object = objects.Ball()
         new_object.init_random(world["boundary"])
@@ -118,7 +113,6 @@ def update_world(t, world):
     new_world["objects"] = new_objects
     new_world["boundary"] = world["boundary"]
     return new_world
-
 
 
 # color function
@@ -140,7 +134,6 @@ def pixel_color(t, coord, ii, n_pixels, world, bound):
     min_x, min_y, min_z = min_coord
     max_x, max_y, max_z = max_coord
 
-
     x, y, z = coord
     r = 0.0
     g = 0.0
@@ -153,16 +146,14 @@ def pixel_color(t, coord, ii, n_pixels, world, bound):
         g += dg
         b += db
 
-
-
     # apply gamma curve
     # only do this on live leds, not in the simulator
-    r, g, b = color_utils.gamma((r, g, b), 2.2)
+    # r, g, b = color_utils.gamma((r, g, b), 2.2)
 
-    return (r*128, g*128, b*128)
+    return (r * 128, g * 128, b * 128)
 
 
-#-------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 # send pixels
 
 print('    sending pixels forever (control-c to exit)...')
@@ -180,7 +171,7 @@ min_z = 0.0
 max_z = 0.0
 
 for coord in coordinates:
-    x,y,z = coord
+    x, y, z = coord
     min_x = min(x, min_x)
     min_y = min(y, min_y)
     min_z = min(z, min_z)
@@ -207,4 +198,3 @@ while True:
     pixels = [pixel_color(t, coord, ii, n_pixels, world, bound) for ii, coord in enumerate(coordinates)]
     client.put_pixels(pixels, channel=0)
     time.sleep(1 / options.fps)
-
