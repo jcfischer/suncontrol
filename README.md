@@ -38,7 +38,7 @@ Fadecandy)
 
 Run the python program:
 
-    $ python bin/experiments.py --layout layouts/sunmachines.json
+    $ python python/experiments.py --layout layouts/sunmachines.json
     
     
 
