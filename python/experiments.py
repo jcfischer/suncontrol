@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
+from __future__ import division
+
 """A demo client for Open Pixel Control
 http://github.com/zestyping/openpixelcontrol
 
@@ -15,16 +18,17 @@ First start the gl simulator using, for example, the included "wall" layout
 
 Then run this script in another shell to send colors to the simulator
 
-    python_clients/spatial_stripes.py --layout layouts/wall.json
+    python/experiments.py --layout layouts/wall.json
 
 """
 
-from __future__ import division
+
 import time
 import sys
 import optparse
 import random
 import objects
+import color_utils
 
 try:
     import json
@@ -32,7 +36,6 @@ except ImportError:
     import simplejson as json
 
 import opc
-import color_utils
 
 # -------------------------------------------------------------------------------
 # command line
@@ -44,7 +47,7 @@ parser.add_option('-l', '--layout', dest='layout',
 parser.add_option('-s', '--server', dest='server', default='127.0.0.1:7890',
                   action='store', type='string',
                   help='ip and port of server')
-parser.add_option('-f', '--fps', dest='fps', default=20,
+parser.add_option('-f', '--fps', dest='fps', default=30,
                   action='store', type='int',
                   help='frames per second')
 
@@ -99,14 +102,37 @@ def update_world(t, world):
         obj.move(delta_t)
 
     new_objects = list(filter(lambda x: x.alive, objs))
-    if random.random() > 0.98:
+    if random.random() > 0.99:
+        print("new Ball")
         new_object = objects.Ball()
         new_object.init_random(world["boundary"])
         new_objects.append(new_object)
 
-    if random.random() > 0.98:
+    if random.random() > 0.99:
+        print("new Glider")
         new_object = objects.Glider()
         new_object.init_random(world["boundary"])
+        new_objects.append(new_object)
+
+    if random.random() > 0.99:
+        print ("new Grower")
+        new_object = objects.Grower()
+        new_object.init_random(world["boundary"])
+        new_object.size = 0.1
+        new_object.max_size = 0.6
+        new_objects.append(new_object)
+
+    if random.random() > 0.99:
+        print ("new Ring")
+        new_object = objects.Ring()
+        new_object.init_random(world["boundary"])
+        new_objects.append(new_object)
+
+    if random.random() > 0.99:
+        print("new Color")
+        new_object = objects.Color()
+        new_object.ttl = 1.0
+        new_object.random_color()
         new_objects.append(new_object)
 
     new_world["time"] = t
@@ -148,9 +174,10 @@ def pixel_color(t, coord, ii, n_pixels, world, bound):
 
     # apply gamma curve
     # only do this on live leds, not in the simulator
-    # r, g, b = color_utils.gamma((r, g, b), 2.2)
+    r, g, b = color_utils.gamma((r, g, b), 2.2)
 
-    return (r * 128, g * 128, b * 128)
+    return r * 192, g * 192, b * 192
+
 
 
 # -------------------------------------------------------------------------------
@@ -187,10 +214,11 @@ red_ball = objects.Ball((0, 0, 0), (0.0, 0, -0.0), (1, 0, 0), 0.3, 20)
 blue_ball = objects.Ball((2, 0, 0), (-0.3, 0, 0.05), (0, 0, 1), 0.4, 20)
 green_ball = objects.Ball((0, 0, 0), (-0.02, 0, 0.1), (0, 1, 0), 0.5, 20)
 glider = objects.Glider((min_x, 0, max_z), (1.5, 0, 0), (0.8, 0.8, 0.8), 0.2, 4)
+ring = objects.Ring((min_x, 0, max_z), (1.5, 0, 0), (0.8, 0.8, 0.8), 0.2, 4)
 
 world = {"time": 0,
          "boundary": bound,
-         "objects": [red_ball]}
+         "objects": [ring]}
 
 while True:
     t = time.time() - start_time
