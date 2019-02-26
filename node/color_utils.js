@@ -1,7 +1,5 @@
 /* Simple color helper functions */
 
-const math = new require('mathjs');
-
 var ColorUtils = {};
 
 ColorUtils.remap = function (x, oldmin, oldmax, newmin, newmax) {
@@ -18,7 +16,7 @@ ColorUtils.remap = function (x, oldmin, oldmax, newmin, newmax) {
 
 ColorUtils.clamp = function (x, minn, maxx) {
     // Restrict the float x to the range minn-maxx
-    return math.max(minn, math.min(maxx, x));
+    return Math.max(minn, Math.min(maxx, x));
 };
 
 ColorUtils.hsv = function (h, s, v) {
@@ -46,6 +44,6 @@ ColorUtils.hsv = function (h, s, v) {
         b = [p, p, t, v, v, q][i];
 
     return [r * 255, g * 255, b * 255];
-}
+};
 
 module.exports = ColorUtils;

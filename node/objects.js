@@ -1,6 +1,7 @@
 
 const math = new require('mathjs');
 const ColorUtils = new require('./color_utils');
+const MathUtils = new require('./math_utils');
 
 var CObject = function() {
     this.pos = [0,0,0];
@@ -14,10 +15,10 @@ var CObject = function() {
 
 };
 
-CObject.prototype.init_random = function(boundary) {
-    this.random_pos(boundary);
+CObject.prototype.init_random = function(opts) {
+    this.random_pos(opts.boundary);
     this.random_vec();
-    this.random_color();
+    this.random_color(opts.primary);
     this.random_ttl();
 };
 
@@ -38,15 +39,18 @@ CObject.prototype.random_vec = function() {
     this.vec = [dx, dy, dz];
 };
 
-CObject.prototype.random_color = function() {
-    this.hsv[0] = math.random();
+CObject.prototype.random_color = function(primary = 0) {
+    let spread = math.random(-0.15, 0.15);
+
+    this.hsv[0] = primary + spread;
+    // console.log(this.hsv[0]);
     this.hsv[1] = math.random();
     this.hsv[2] = math.random();
 
 };
 
 CObject.prototype.random_ttl = function() {
-    this.ttl = math.random(4000, 10000);
+    this.ttl = math.random(20000, 50000);
 };
 
 CObject.prototype.move = function(dt) {
@@ -54,7 +58,8 @@ CObject.prototype.move = function(dt) {
         this.ttl -= dt;
         let factor = dt / 1000.0;
         this.size += factor;
-        this.pos = math.add(this.pos, math.multiply(factor, this.vec));
+        this.pos = MathUtils.add(this.pos, MathUtils.scale(factor, this.vec));
+        // this.pos = math.add(this.pos, math.multiply(factor, this.vec));
         if (this.ttl < 1000) {
             this.hsv[2] -= factor;
         }
@@ -65,6 +70,7 @@ CObject.prototype.move = function(dt) {
 CObject.prototype.draw = function(coord) {
     // returns an rgb tuple to add to the current coordinates color
 
+    //let distance = MathUtils.distance(coord, this.pos);
     let distance = math.distance(coord, this.pos);
     //console.log(distance);
 

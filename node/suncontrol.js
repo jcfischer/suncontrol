@@ -27,7 +27,6 @@ var start_time;
 var boundary;
 
 
-
 function compute_boundary(model) {
     let min_x = 0.0;
     let min_y = 0.0;
@@ -36,7 +35,7 @@ function compute_boundary(model) {
     let min_z = 0.0;
     let max_z = 0.0;
 
-    model.forEach(function(p) {
+    model.forEach(function (p) {
         let x = p.point[0];
         let y = p.point[1];
         let z = p.point[2];
@@ -58,56 +57,69 @@ function compute_boundary(model) {
 function update_world(t) {
     let last_time = world['time'];
     let delta_t = t - last_time;
-     // console.log("update:", delta_t);
-    let new_world = {
-        time: t,
-        boundary: world['boundary'],
-        objects: []
-    };
+    // console.log("update:", delta_t);
+    world.time = t;
+    world.hue = (world.hue += 0.001) % 1;
+
     let objects = world['objects'];
 
-    objects.forEach(function(obj) {
+    objects.forEach(function (obj) {
         obj.move(delta_t);
     });
 
-    new_objects = objects.filter(function(obj) { return obj.alive });
+    new_objects = objects.filter(function (obj) {
+        return obj.alive
+    });
 
-    if (new_objects.length < 6 && Math.random() > 0.9) {
+    if (new_objects.length < 100 && Math.random() > 0.2) {
         console.log('new object', new_objects.length);
         let obj = new CObject();
-        obj.init_random(world['boundary']);
+        world.hue += 0.05;
+        obj.init_random({boundary: world['boundary'], primary: world.hue});
         new_objects.push(obj);
     }
 
-    new_world['objects'] = new_objects;
-    world = new_world;
+    world.objects = new_objects;
 }
 
+var i = 0;
 function draw() {
-
+    i += 1;
+    const ns = process.hrtime();
     var now = new Date().getTime();
     let t = now - start_time;
     update_world(t, world);
 
     function shader(p) {
-            let r = 0.0, g = 0.0, b = 0.0;
+        let r = 0.0, g = 0.0, b = 0.0;
 
-            world.objects.forEach( function (obj) {
-               let new_color = obj.draw(p.point);
+        world.objects.forEach(function (obj) {
+            let new_color = obj.draw(p.point);
 
-               r += new_color[0];
-               g += new_color[1];
-               b += new_color[2];
-            });
-            //console.log(p);
-            // console.log("rgb:", r, g, b);
-            return [r, g, b];
+            r += new_color[0];
+            g += new_color[1];
+            b += new_color[2];
+        });
+        //console.log(p);
+        // console.log("rgb:", r, g, b);
+        return [r, g, b];
     }
+
     client.mapPixels(shader, model);
+    const nsthen = process.hrtime();
+    console.log((nsthen[1] - ns[1]) / 1000, 'mus');
+
+}
+
+function frameCount () {
+    let time = new Date().getTime() / 1000;
+    console.log("###### :", i, time);
 }
 
 start_time = new Date().getTime();
 boundary = compute_boundary(model);
 world['boundary'] = boundary;
+world.hue = 0;
 
-setInterval(draw, 25);
+setInterval(draw, 30);
+// setInterval(frameCount, 1000);
