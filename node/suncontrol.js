@@ -71,7 +71,7 @@ function update_world(t) {
         return obj.alive
     });
 
-    if (new_objects.length < 100 && Math.random() > 0.2) {
+    if (new_objects.length < 10 && Math.random() > 0.9) {
         console.log('new object', new_objects.length);
         let obj = new CObject();
         world.hue += 0.05;
