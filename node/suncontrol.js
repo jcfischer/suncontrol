@@ -5,7 +5,9 @@ var model = OPC.loadModel(process.argv[2] || '../layouts/grid32x16z.json');
 var client = new OPC('localhost', 7890);
 
 
-const CObject = new require('./objects');
+const CObject = new require('./objects/objects.js');
+const ExpandingBall = new require('./objects/expanding_ball.js');
+const JuliaSet = new require('./objects/julia.js');
 
 
 var min = Math.min;
@@ -54,6 +56,24 @@ function compute_boundary(model) {
     return bound;
 }
 
+function chooseShape(world) {
+    let obj;
+    // return new JuliaSet();
+    let julia_objects = world.objects.filter(function (obj) {
+        return obj.name == "JuliaSet";
+    });
+
+    if (julia_objects.length == 0 && Math.random() > 0.9) {
+        console.log("spawning Julia Set")
+        obj = new JuliaSet();
+    } else if (Math.random() > 0.2) {
+        obj = new ExpandingBall();
+    } else {
+        obj = new CObject()
+    }
+    return obj;
+}
+
 function update_world(t) {
     let last_time = world['time'];
     let delta_t = t - last_time;
@@ -71,9 +91,9 @@ function update_world(t) {
         return obj.alive
     });
 
-    if (new_objects.length < 10 && Math.random() > 0.9) {
+    if (new_objects.length < 6 && Math.random() > 0.9) {
         console.log('new object', new_objects.length);
-        let obj = new CObject();
+        let obj = chooseShape(world);
         world.hue += 0.05;
         obj.init_random({boundary: world['boundary'], primary: world.hue});
         new_objects.push(obj);
@@ -83,6 +103,7 @@ function update_world(t) {
 }
 
 var i = 0;
+
 function draw() {
     i += 1;
     const ns = process.hrtime();
@@ -95,7 +116,6 @@ function draw() {
 
         world.objects.forEach(function (obj) {
             let new_color = obj.draw(p.point);
-
             r += new_color[0];
             g += new_color[1];
             b += new_color[2];
@@ -111,7 +131,7 @@ function draw() {
 
 }
 
-function frameCount () {
+function frameCount() {
     let time = new Date().getTime() / 1000;
     console.log("###### :", i, time);
 }

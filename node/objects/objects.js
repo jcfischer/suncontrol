@@ -1,7 +1,7 @@
 
 const math = new require('mathjs');
-const ColorUtils = new require('./color_utils');
-const MathUtils = new require('./math_utils');
+const ColorUtils = new require('../lib/color_utils');
+const MathUtils = new require('../lib/math_utils');
 
 class CObject {
 
@@ -14,6 +14,7 @@ class CObject {
         this.max_size = 0.2;
         this.ttl = 10000;
         this.alive = true;
+        this.name = "Generic";
     }
 
     init_random(opts) {
@@ -56,7 +57,6 @@ class CObject {
         if (this.alive) {
             this.ttl -= dt;
             let factor = dt / 1000.0;
-            this.size += factor;
             this.pos = MathUtils.add(this.pos, MathUtils.scale(factor, this.vec));
 
             if (this.ttl < 1000) {
@@ -69,28 +69,18 @@ class CObject {
     draw(coord) {
         // returns an rgb tuple to add to the current coordinates color
 
-        //let distance = MathUtils.distance(coord, this.pos);
-        let distance = math.distance(coord, this.pos);
-        //console.log(distance);
+        let distance = MathUtils.distance(coord, this.pos);
 
         let color = [0, 0, 0];
 
-        if (distance < this.size + 0.1) {
-            let dot = (1 / (distance + 0.0001)); //   + (time.time()*twinkle_speed % 1)
-            // dot = abs(dot * 2 - 1)
-            dot = ColorUtils.remap(dot, 0, 10, 0.1, 1.1);
-            // dot = ColorUtils.clamp(dot, -0.5, 1.1);
-            // dot **=2
-            dot = ColorUtils.clamp(dot, 0.0, 1);
-            //console.log(dot);
-            color = ColorUtils.hsv(this.hsv[0], this.hsv[1], this.hsv[2] * dot);
-            //console.log(color);
-
+        if (distance < this.size + 0.05) {
+            color = ColorUtils.hsv(this.hsv[0], this.hsv[1], this.hsv[2]);
         }
-        //console.log(new_color);
+
         return color;
     }
 }
+
 
 
 module.exports = CObject;
