@@ -8,20 +8,22 @@ const MathUtils = new require('../lib/math_utils');
 
 class JuliaSet extends CObject {
 
-    constructor() {
+    constructor(opts) {
 
         super();
 
         this.creal = -.8;
         this.cimag = .156;
         this.frame = 0;
-        this.pallette = [];
         this.zoom_x = 1;
         this.zoom_y = 1;
         this.x = 0;
         this.y = 0;
         this.max_iterations = 256;
         this.name = "JuliaSet";
+        this.zoom = opts['zoom'] || true;
+        this.animate = opts['animate'] || false;
+        console.log(this);
     }
 
     random_pos(boundary) {
@@ -51,12 +53,20 @@ class JuliaSet extends CObject {
         }
         this.hsv[0] += 0.0015;  // move trough the color space
         this.frame += 1;        // increase the number of the frame
-        this.creal = -.8 + this.x * Math.sin(this.frame / (3.14 * this.freq));    // calculate the new coordinates
-        this.cimag = .156 + this.y * Math.cos(this.frame / (6.28 * this.freq));   // of the c point
 
+        if (this.animate) {
+            this.creal = -.8 + this.x * Math.sin(this.frame / (3.14 * this.freq));    // calculate the new coordinates
+            this.cimag = .156 + this.y * Math.cos(this.frame / (6.28 * this.freq));   // of the c point
+        } else {
+            this.creal = -.8;
+            this.cimag = .156;
+        }
+        if (this.zoom) {
+            this.zoom_x += 0.02;
+            this.zoom_y += 0.02;
+        }
         // slowly zoom into the Set
-        this.zoom_x += 0.001;
-        this.zoom_y += 0.001;
+
 
         this.alive = this.ttl > 0;
     }

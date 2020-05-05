@@ -40,7 +40,10 @@ Run the python program:
 
     $ python python/experiments.py --layout layouts/sunmachines.json
     
-    
+or the node version
+
+    $ cd node
+    $ node suncontrol.js ../layouts/sunmachines.json
 
   
 

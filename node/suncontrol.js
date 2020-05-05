@@ -7,6 +7,8 @@ var client = new OPC('localhost', 7890);
 
 const CObject = new require('./objects/objects.js');
 const ExpandingBall = new require('./objects/expanding_ball.js');
+const ExpandingRing = new require('./objects/expanding_ring.js');
+const ParticleTrails = new require('./objects/particle_trails.js');
 const JuliaSet = new require('./objects/julia.js');
 
 
@@ -58,18 +60,37 @@ function compute_boundary(model) {
 
 function chooseShape(world) {
     let obj;
-    // return new JuliaSet();
+    let zoom, animate;
+    if (world.time % 2 == 0) {
+        zoom = true;
+        animate = false;
+    } else {
+        zoom = false;
+        animate = true;
+    }
+    // return new JuliaSet({zoom: zoom, animate: animate});
     let julia_objects = world.objects.filter(function (obj) {
         return obj.name == "JuliaSet";
     });
+    let particle_objects = world.objects.filter(function (obj) {
+        return obj.name == "ParticleTrails";
+    });
 
-    if (julia_objects.length == 0 && Math.random() > 0.9) {
-        console.log("spawning Julia Set")
-        obj = new JuliaSet();
-    } else if (Math.random() > 0.2) {
+    let julia_present = julia_objects.length > 0;
+    let particles_present = particle_objects.length > 0;
+
+    if (!julia_present  && Math.random() > 0.98) {
+        console.log("spawning Julia Set");
+        obj = new JuliaSet({zoom: zoom, animate: animate});
+    } else if (!particles_present  && Math.random() > 0.5 ) {
+        console.log("spawning particle trails");
+        obj = new ParticleTrails();
+    } else if (Math.random() > 0.3) {
         obj = new ExpandingBall();
+    } else if (Math.random() > 0.4) {
+        obj = new ExpandingRing();
     } else {
-        obj = new CObject()
+        obj = null;
     }
     return obj;
 }
@@ -91,16 +112,34 @@ function update_world(t) {
         return obj.alive
     });
 
-    if (new_objects.length < 6 && Math.random() > 0.9) {
-        console.log('new object', new_objects.length);
+    if (new_objects.length < 7 && Math.random() > 0.95) {
         let obj = chooseShape(world);
         world.hue += 0.05;
-        obj.init_random({boundary: world['boundary'], primary: world.hue});
-        new_objects.push(obj);
+        if (obj) {
+            console.log('new', obj.name);
+            obj.init_random({boundary: world['boundary'], primary: world.hue});
+            new_objects.push(obj);
+        }
+
     }
 
     world.objects = new_objects;
 }
+
+function shader(p) {
+    let r = 0.0, g = 0.0, b = 0.0;
+
+    world.objects.forEach(function (obj) {
+        let new_color = obj.draw(p.point);
+        r += new_color[0];
+        g += new_color[1];
+        b += new_color[2];
+    });
+    //console.log(p);
+    // console.log("rgb:", r, g, b);
+    return [r, g, b];
+}
+
 
 var i = 0;
 
@@ -110,24 +149,13 @@ function draw() {
     var now = new Date().getTime();
     let t = now - start_time;
     update_world(t, world);
-
-    function shader(p) {
-        let r = 0.0, g = 0.0, b = 0.0;
-
-        world.objects.forEach(function (obj) {
-            let new_color = obj.draw(p.point);
-            r += new_color[0];
-            g += new_color[1];
-            b += new_color[2];
-        });
-        //console.log(p);
-        // console.log("rgb:", r, g, b);
-        return [r, g, b];
-    }
-
     client.mapPixels(shader, model);
+
+
     const nsthen = process.hrtime();
-    console.log((nsthen[1] - ns[1]) / 1000, 'mus');
+    var then = new Date().getTime();
+    //console.log((nsthen[1] - ns[1]) / 1000, 'mus');
+    //console.log(then - now, 'ms');
 
 }
 
