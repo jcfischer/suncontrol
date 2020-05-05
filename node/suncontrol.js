@@ -82,7 +82,7 @@ function chooseShape(world) {
     if (!julia_present  && Math.random() > 0.98) {
         console.log("spawning Julia Set");
         obj = new JuliaSet({zoom: zoom, animate: animate});
-    } else if (!particles_present  && Math.random() > 0.5 ) {
+    } else if (!particles_present  && Math.random() > 0.98 ) {
         console.log("spawning particle trails");
         obj = new ParticleTrails();
     } else if (Math.random() > 0.3) {
