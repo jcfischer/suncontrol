@@ -4,7 +4,7 @@
     "flags": "~0.1.1",
     "mathjs": "~5.5.0",
     "midi": "~0.9.5",
-    "minimist": "~0.0.8",
+    "minimist": "~1.2.3",
     "simplex-noise": "~2.1.1"
   },
   "private": true
