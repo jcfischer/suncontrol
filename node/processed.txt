@@ -1,0 +1,1116 @@
+Statistical profiling result from isolate-0x105002000-v8.log, (4270 ticks, 65 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      5    0.1%          /usr/lib/system/libsystem_pthread.dylib
+      3    0.1%          /usr/lib/system/libsystem_malloc.dylib
+      2    0.0%          /usr/lib/system/libsystem_c.dylib
+      1    0.0%          /usr/lib/system/libsystem_platform.dylib
+      1    0.0%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    317    7.4%    7.4%  Builtin: LoadIC
+    101    2.4%    2.4%  LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+    100    2.3%    2.3%  LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/max.js:52:22
+     98    2.3%    2.3%  LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/min.js:52:22
+     88    2.1%    2.1%  Builtin: ArrayPrototypeSlice
+     83    1.9%    1.9%  LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     72    1.7%    1.7%  Builtin: ArgumentsAdaptorTrampoline
+     61    1.4%    1.4%  LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     57    1.3%    1.3%  Builtin: CallFunction_ReceiverIsAny
+     49    1.1%    1.2%  LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     46    1.1%    1.1%  LazyCompile: *isMatrix /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/collection/isMatrix.js:9:35
+     42    1.0%    1.0%  LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     41    1.0%    1.0%  LazyCompile: *testArgs /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:417:33
+     41    1.0%    1.0%  Builtin: CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+     38    0.9%    0.9%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+     37    0.9%    0.9%  LazyCompile: *numberNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/arithmetic/subtract.js:53:44
+     36    0.8%    0.8%  Builtin: Call_ReceiverIsNullOrUndefined
+     33    0.8%    0.8%  LazyCompile: *ArrayArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:115:40
+     29    0.7%    0.7%  LazyCompile: *numberNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/relational/larger.js:53:44
+     29    0.7%    0.7%  Builtin: InterpreterEntryTrampoline
+     26    0.6%    0.6%  Builtin: CallWithArrayLike
+     25    0.6%    0.6%  LazyCompile: *numberNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/arithmetic/addScalar.js:18:44
+     24    0.6%    0.6%  LazyCompile: *numberNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/relational/smaller.js:53:44
+     24    0.6%    0.6%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+     23    0.5%    0.5%  LazyCompile: *type.isNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/core/typed.js:42:28
+     23    0.5%    0.5%  Builtin: Call_ReceiverIsNotNullOrUndefined
+     23    0.5%    0.5%  Builtin: CallForwardVarargs
+     22    0.5%    0.5%  LazyCompile: *numberNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/arithmetic/multiplyScalar.js:18:44
+     19    0.4%    0.4%  LazyCompile: *ColorUtils.hsv /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:24:27
+     17    0.4%    0.4%  LazyCompile: *testRestParam /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:408:38
+     16    0.4%    0.4%  Builtin: Call_ReceiverIsAny
+     15    0.4%    0.4%  Builtin: NewArgumentsElements
+     10    0.2%    0.2%  LazyCompile: *_sqrtNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/arithmetic/sqrt.js:59:23
+     10    0.2%    0.2%  Builtin: CallVarargs
+      9    0.2%    0.2%  LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      8    0.2%    0.2%  LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      8    0.2%    0.2%  Builtin: ArrayIsArray
+      6    0.1%    0.1%  Builtin: LoadICTrampoline
+      5    0.1%    0.1%  LazyCompile: *get /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/object.js:208:24
+      5    0.1%    0.1%  Builtin: CEntry_Return1_DontSaveFPRegs_ArgvOnStack_BuiltinExit
+      4    0.1%    0.1%  LazyCompile: ~toString buffer.js:638:46
+      4    0.1%    0.1%  Builtin: StoreIC
+      3    0.1%    0.1%  Stub: StoreFastElementStub
+      3    0.1%    0.1%  LazyCompile: ~readSync fs.js:490:18
+      3    0.1%    0.1%  LazyCompile: ~nextTick internal/process/next_tick.js:109:18
+      3    0.1%    0.1%  LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      3    0.1%    0.1%  Builtin: LoadIC_Noninlined
+      3    0.1%    0.1%  Builtin: LoadIC_FunctionPrototype
+      3    0.1%    0.1%  Builtin: KeyedLoadIC
+      3    0.1%    0.1%  Builtin: FastNewClosure
+      3    0.1%    0.1%  Builtin: ArrayForEach
+      2    0.0%    0.0%  LazyCompile: ~validateAsyncId internal/async_hooks.js:122:25
+      2    0.0%    0.0%  LazyCompile: ~pushAsyncIds internal/async_hooks.js:394:22
+      2    0.0%    0.0%  LazyCompile: ~onwrite _stream_writable.js:450:17
+      2    0.0%    0.0%  LazyCompile: *normalizeString path.js:52:25
+      2    0.0%    0.0%  LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      2    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:388:37
+      2    0.0%    0.0%  LazyCompile: *ColorUtils.remap /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:7:29
+      2    0.0%    0.0%  LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      2    0.0%    0.0%  Builtin: MathMin
+      2    0.0%    0.0%  Builtin: KeyedLoadIC_Megamorphic
+      1    0.0%    0.0%  LazyCompile: ~writeOrBuffer _stream_writable.js:365:23
+      1    0.0%    0.0%  LazyCompile: ~updateChildren internal/modules/cjs/loader.js:100:24
+      1    0.0%    0.0%  LazyCompile: ~type.isUnit /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/core/typed.js:56:26
+      1    0.0%    0.0%  LazyCompile: ~tryStatSync fs.js:308:21
+      1    0.0%    0.0%  LazyCompile: ~tryPackage internal/modules/cjs/loader.js:186:20
+      1    0.0%    0.0%  LazyCompile: ~testArgs /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:442:35
+      1    0.0%    0.0%  LazyCompile: ~stripBOM internal/modules/cjs/helpers.js:55:18
+      1    0.0%    0.0%  LazyCompile: ~stringSlice buffer.js:584:21
+      1    0.0%    0.0%  LazyCompile: ~resolve path.js:1068:28
+      1    0.0%    0.0%  LazyCompile: ~require internal/modules/cjs/helpers.js:17:19
+      1    0.0%    0.0%  LazyCompile: ~push internal/fixed_queue.js:71:7
+      1    0.0%    0.0%  LazyCompile: ~processTicksAndRejections internal/process/next_tick.js:54:35
+      1    0.0%    0.0%  LazyCompile: ~parseParam /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:254:25
+      1    0.0%    0.0%  LazyCompile: ~numberNumber /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/relational/larger.js:53:44
+      1    0.0%    0.0%  LazyCompile: ~load /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/core/core.js:92:16
+      1    0.0%    0.0%  LazyCompile: ~isFileType fs.js:165:20
+      1    0.0%    0.0%  LazyCompile: ~inspect internal/util/inspect.js:156:17
+      1    0.0%    0.0%  LazyCompile: ~getOptions internal/fs/utils.js:167:20
+      1    0.0%    0.0%  LazyCompile: ~getColorDepth internal/tty.js:70:23
+      1    0.0%    0.0%  LazyCompile: ~generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+      1    0.0%    0.0%  LazyCompile: ~formatNumber internal/util/inspect.js:807:22
+      1    0.0%    0.0%  LazyCompile: ~findInArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1218:25
+      1    0.0%    0.0%  LazyCompile: ~exports.nearlyEqual /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/number.js:494:32
+      1    0.0%    0.0%  LazyCompile: ~deepForEach /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/collection/deepForEach.js:13:38
+      1    0.0%    0.0%  LazyCompile: ~compileTests /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:400:26
+      1    0.0%    0.0%  LazyCompile: ~compareSignatures /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:690:32
+      1    0.0%    0.0%  LazyCompile: ~_unrefTimer net.js:337:52
+      1    0.0%    0.0%  LazyCompile: ~_onceWrap events.js:289:19
+      1    0.0%    0.0%  LazyCompile: ~_getMaxListeners events.js:96:26
+      1    0.0%    0.0%  LazyCompile: ~_distance3d /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:323:23
+      1    0.0%    0.0%  LazyCompile: ~_addListener events.js:208:22
+      1    0.0%    0.0%  LazyCompile: ~Writable.write _stream_writable.js:273:36
+      1    0.0%    0.0%  LazyCompile: ~Socket._writeGeneric net.js:695:42
+      1    0.0%    0.0%  LazyCompile: ~Script vm.js:48:14
+      1    0.0%    0.0%  LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:747:37
+      1    0.0%    0.0%  LazyCompile: ~ColorUtils.remap /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:7:29
+      1    0.0%    0.0%  LazyCompile: ~ColorUtils.hsv /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:24:27
+      1    0.0%    0.0%  LazyCompile: ~CObject.move /Users/fischer/work/adafruit/suncontrol/node/objects.js:55:34
+      1    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:926:51
+      1    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:800:36
+      1    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1008:36
+      1    0.0%    0.0%  LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/type/chain/Chain.js:182:30
+      1    0.0%    0.0%  LazyCompile: *processTimers timers.js:256:23
+      1    0.0%    0.0%  LazyCompile: *mixkey /Users/fischer/work/adafruit/suncontrol/node/node_modules/seed-random/index.js:134:16
+      1    0.0%    0.0%  LazyCompile: *hasConversions /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:353:28
+      1    0.0%    0.0%  LazyCompile: *dirname path.js:1259:28
+      1    0.0%    0.0%  LazyCompile: *_3d /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:251:15
+      1    0.0%    0.0%  Builtin: StringSubstring
+      1    0.0%    0.0%  Builtin: StringPrototypeCharCodeAt
+      1    0.0%    0.0%  Builtin: StringAdd_CheckNone_NotTenured
+      1    0.0%    0.0%  Builtin: StoreIC_Uninitialized
+      1    0.0%    0.0%  Builtin: NonNumberToNumeric
+      1    0.0%    0.0%  Builtin: KeyedStoreIC
+      1    0.0%    0.0%  Builtin: GlobalIsNaN
+      1    0.0%    0.0%  Builtin: FindOrderedHashMapEntry
+      1    0.0%    0.0%  Builtin: FastNewObject
+      1    0.0%    0.0%  Builtin: CreateTypedArray
+      1    0.0%    0.0%  Builtin: ArrayMap
+      1    0.0%    0.0%  Builtin: AdaptorWithBuiltinExitFrame
+
+ [C++]:
+   ticks  total  nonlib   name
+    393    9.2%    9.2%  T _kpersona_get
+     89    2.1%    2.1%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     87    2.0%    2.0%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
+     82    1.9%    1.9%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     79    1.9%    1.9%  T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     66    1.5%    1.6%  T v8::internal::ElementsAccessor::Concat(v8::internal::Isolate*, v8::internal::Arguments*, unsigned int, unsigned int)
+     64    1.5%    1.5%  T v8::internal::Factory::InitializeJSObjectFromMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Map>)
+     59    1.4%    1.4%  t v8::internal::(anonymous namespace)::CopyObjectToObjectElements(v8::internal::Isolate*, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int)
+     53    1.2%    1.2%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     52    1.2%    1.2%  t v8::internal::JSSloppyArgumentsObject::GetSloppyArgumentsLength(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, int*)
+     50    1.2%    1.2%  t v8::internal::(anonymous namespace)::Fast_ArrayConcat(v8::internal::Isolate*, v8::internal::BuiltinArguments*)
+     49    1.1%    1.2%  T node::native_module::NativeModuleLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     48    1.1%    1.1%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)2> >::Slice(v8::internal::Handle<v8::internal::JSObject>, unsigned int, unsigned int)
+     47    1.1%    1.1%  T v8::internal::Factory::NewJSArrayStorage(v8::internal::Handle<v8::internal::JSArray>, int, int, v8::internal::ArrayStorageAllocationMode)
+     42    1.0%    1.0%  T v8::internal::Heap::AllocateRawWithLightRetry(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     42    1.0%    1.0%  T v8::internal::Factory::AllocateRawWithAllocationSite(v8::internal::Handle<v8::internal::Map>, v8::internal::PretenureFlag, v8::internal::Handle<v8::internal::AllocationSite>)
+     40    0.9%    0.9%  t v8::internal::Builtin_Impl_ArrayConcat(v8::internal::BuiltinArguments, v8::internal::Isolate*)
+     32    0.7%    0.8%  T v8::internal::Factory::InitializeJSObjectBody(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+     28    0.7%    0.7%  T v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, int, int, v8::internal::ArrayStorageAllocationMode, v8::internal::PretenureFlag)
+     27    0.6%    0.6%  T v8::internal::LoadIC::ComputeHandler(v8::internal::LookupIterator*)
+     27    0.6%    0.6%  T _vm_purgable_control
+     25    0.6%    0.6%  T v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     25    0.6%    0.6%  T v8::internal::Factory::NewJSArray(v8::internal::ElementsKind, v8::internal::PretenureFlag)
+     24    0.6%    0.6%  T v8::internal::Map::GetOrCreatePrototypeChainValidityCell(v8::internal::Handle<v8::internal::Map>, v8::internal::Isolate*)
+     23    0.5%    0.5%  T v8::internal::JSObject::GetElementsAccessor()
+     23    0.5%    0.5%  T v8::internal::Factory::NewJSObjectFromMap(v8::internal::Handle<v8::internal::Map>, v8::internal::PretenureFlag, v8::internal::Handle<v8::internal::AllocationSite>)
+     21    0.5%    0.5%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+     21    0.5%    0.5%  T v8::internal::LoadIC::Load(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>)
+     21    0.5%    0.5%  T v8::internal::LoadHandler::LoadFromPrototype(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::Handle<v8::internal::Smi>, v8::internal::MaybeObjectHandle, v8::internal::MaybeObjectHandle)
+     20    0.5%    0.5%  T v8::internal::IncrementalMarking::Step(unsigned long, v8::internal::IncrementalMarking::CompletionAction, v8::internal::StepOrigin, v8::internal::WorklistToProcess)
+     19    0.4%    0.4%  t void v8::internal::(anonymous namespace)::InitPrototypeChecks<v8::internal::LoadHandler>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::LoadHandler>, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::MaybeObjectHandle, v8::internal::MaybeObjectHandle)
+     16    0.4%    0.4%  T v8::internal::StubCache::Set(v8::internal::Name*, v8::internal::Map*, v8::internal::MaybeObject*)
+     16    0.4%    0.4%  T v8::internal::JSReceiver::HasComplexElements()
+     16    0.4%    0.4%  T v8::internal::Factory::AllocateRawArray(int, v8::internal::PretenureFlag)
+     15    0.4%    0.4%  T v8::internal::FeedbackVector::GetKind(v8::internal::FeedbackSlot) const
+     14    0.3%    0.3%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)2> >::HasAccessors(v8::internal::JSObject*)
+     14    0.3%    0.3%  T void node::StreamBase::JSMethod<node::LibuvStreamWrap, &(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+     14    0.3%    0.3%  T v8::internal::IC::IC(v8::internal::Isolate*, v8::internal::Handle<v8::internal::FeedbackVector>, v8::internal::FeedbackSlot)
+     14    0.3%    0.3%  T v8::internal::Factory::New(v8::internal::Handle<v8::internal::Map>, v8::internal::PretenureFlag)
+     13    0.3%    0.3%  t v8::internal::(anonymous namespace)::FastSmiOrObjectElementsAccessor<v8::internal::(anonymous namespace)::FastPackedObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)2> >::CopyElementsImpl(v8::internal::Isolate*, v8::internal::FixedArrayBase*, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int, int)
+     13    0.3%    0.3%  T void node::StreamBase::JSMethod<node::LibuvStreamWrap, &(node::StreamBase::WriteBuffer(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+     13    0.3%    0.3%  T v8::internal::Object::GetProperty(v8::internal::LookupIterator*, v8::internal::OnNonExistent)
+     13    0.3%    0.3%  T v8::internal::FeedbackNexus::StateFromFeedback() const
+     12    0.3%    0.3%  T v8::internal::Object::GetPrototypeChainRootMap(v8::internal::Isolate*) const
+     12    0.3%    0.3%  T ___guarded_open_np
+     11    0.3%    0.3%  t v8::internal::StatsCounter::Increment()
+     11    0.3%    0.3%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+     11    0.3%    0.3%  T v8::internal::LookupIterator::GetRootForNonJSReceiver(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, unsigned int)
+     11    0.3%    0.3%  T v8::internal::LoadIC::UpdateCaches(v8::internal::LookupIterator*)
+     11    0.3%    0.3%  T v8::internal::Heap::builtin(int)
+     11    0.3%    0.3%  T _mach_vm_purgable_control
+     10    0.2%    0.2%  t void v8::internal::BodyDescriptorBase::IteratePointers<v8::internal::MarkingVisitor<(v8::internal::FixedArrayVisitationMode)1, (v8::internal::TraceRetainingPathMode)1, v8::internal::IncrementalMarkingState> >(v8::internal::HeapObject*, int, int, v8::internal::MarkingVisitor<(v8::internal::FixedArrayVisitationMode)1, (v8::internal::TraceRetainingPathMode)1, v8::internal::IncrementalMarkingState>*)
+     10    0.2%    0.2%  t int v8::internal::(anonymous namespace)::GetPrototypeCheckCount<v8::internal::LoadHandler>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Smi>*, v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::MaybeObjectHandle, v8::internal::MaybeObjectHandle)
+     10    0.2%    0.2%  T v8::internal::Space::AllocationStep(int, unsigned long, int)
+     10    0.2%    0.2%  T v8::internal::LookupIterator::FetchValue() const
+     10    0.2%    0.2%  T _mach_error_type
+      9    0.2%    0.2%  t v8::internal::PagedSpace::AllocateRaw(int, v8::internal::AllocationAlignment)
+      9    0.2%    0.2%  T v8::internal::Map::GetOrCreatePrototypeInfo(v8::internal::Handle<v8::internal::Map>, v8::internal::Isolate*)
+      9    0.2%    0.2%  T v8::internal::JSObject::LazyRegisterPrototypeUser(v8::internal::Handle<v8::internal::Map>, v8::internal::Isolate*)
+      9    0.2%    0.2%  T node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      8    0.2%    0.2%  T v8::internal::IsMoreGeneralElementsKindTransition(v8::internal::ElementsKind, v8::internal::ElementsKind)
+      7    0.2%    0.2%  t v8::internal::LookupIterator::LookupIterator(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>, v8::internal::LookupIterator::Configuration)
+      7    0.2%    0.2%  T v8::internal::Factory::AllocateRawFixedArray(int, v8::internal::PretenureFlag)
+      6    0.1%    0.1%  T void v8::internal::LookupIterator::Start<false>()
+      6    0.1%    0.1%  T v8::internal::IC::PatchCache(v8::internal::Handle<v8::internal::Name>, v8::internal::MaybeObjectHandle const&)
+      6    0.1%    0.1%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      6    0.1%    0.1%  T _mach_port_destroy
+      5    0.1%    0.1%  T v8::internal::compiler::GraphReducer::ReduceTop()
+      5    0.1%    0.1%  T v8::internal::Isolate::IsIsConcatSpreadableLookupChainIntact()
+      5    0.1%    0.1%  T v8::internal::IC::TraceIC(char const*, v8::internal::Handle<v8::internal::Object>)
+      5    0.1%    0.1%  T v8::internal::Factory::NewLoadHandler(int)
+      4    0.1%    0.1%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)2> >::CopyElements(v8::internal::JSObject*, unsigned int, v8::internal::ElementsKind, v8::internal::Handle<v8::internal::FixedArrayBase>, unsigned int, int)
+      4    0.1%    0.1%  T v8::internal::LookupIterator::GetConstantIndex() const
+      4    0.1%    0.1%  T v8::internal::IncrementalMarking::WhiteToGreyAndPush(v8::internal::HeapObject*)
+      4    0.1%    0.1%  T v8::internal::IC::UpdateMegamorphicCache(v8::internal::Handle<v8::internal::Map>, v8::internal::Handle<v8::internal::Name>, v8::internal::MaybeObjectHandle const&)
+      4    0.1%    0.1%  T v8::internal::BuiltinDeserializer::ExtractCodeObjectSize(int)
+      4    0.1%    0.1%  T v8::internal::Bitmap::Clear()
+      4    0.1%    0.1%  T _mach_vm_protect
+      3    0.1%    0.1%  t void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.1%    0.1%  t v8::internal::WasmCompileLazyFrame::unchecked_code() const
+      3    0.1%    0.1%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObjectReference**, v8::internal::HeapObject*)
+      3    0.1%    0.1%  t node::fs::InternalModuleReadJSON(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.1%    0.1%  t _szone_malloc_should_clear
+      3    0.1%    0.1%  t __os_unfair_lock_unlock_slow
+      3    0.1%    0.1%  T v8::internal::compiler::SourcePositionTable::GetSourcePosition(v8::internal::compiler::Node*) const
+      3    0.1%    0.1%  T v8::internal::SerializerDeserializer::Iterate(v8::internal::Isolate*, v8::internal::RootVisitor*)
+      3    0.1%    0.1%  T v8::internal::Scavenger::ScavengePage(v8::internal::MemoryChunk*)
+      3    0.1%    0.1%  T v8::internal::IC::UpdateState(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>)
+      2    0.0%    0.0%  t v8::internal::Worklist<v8::internal::EphemeronHashTable*, 64>::Push(int, v8::internal::EphemeronHashTable*)
+      2    0.0%    0.0%  t v8::internal::MaybeHandle<v8::internal::Object> v8::internal::(anonymous namespace)::HandleApiCallHelper<false>(v8::internal::Isolate*, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::HeapObject>, v8::internal::Handle<v8::internal::FunctionTemplateInfo>, v8::internal::Handle<v8::internal::Object>, v8::internal::BuiltinArguments)
+      2    0.0%    0.0%  t node::i18n::ToASCII(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t node::MemoryRetainer::WrappedObject() const
+      2    0.0%    0.0%  t node::EnvGetter(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t __platform_memmove$VARIANT$Base
+      2    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::BytecodeGenerator(v8::internal::UnoptimizedCompilationInfo*, v8::internal::AstStringConstants const*, v8::internal::ZoneVector<v8::internal::FunctionLiteral*>*)
+      2    0.0%    0.0%  T v8::internal::compiler::Node::New(v8::internal::Zone*, unsigned int, v8::internal::compiler::Operator const*, int, v8::internal::compiler::Node* const*, bool)
+      2    0.0%    0.0%  T v8::internal::PagedSpace::RawSlowRefillLinearAllocationArea(int)
+      2    0.0%    0.0%  T v8::internal::NewSpace::UpdateLinearAllocationArea()
+      2    0.0%    0.0%  T v8::internal::Map::GetPrototypeChainRootMap(v8::internal::Isolate*) const
+      2    0.0%    0.0%  T v8::internal::JSObject::MakePrototypesFast(v8::internal::Handle<v8::internal::Object>, v8::internal::WhereToStart, v8::internal::Isolate*)
+      2    0.0%    0.0%  T v8::internal::Heap::Scavenge()
+      2    0.0%    0.0%  T v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags)
+      2    0.0%    0.0%  T v8::internal::Factory::TryNewCode(v8::internal::CodeDesc const&, v8::internal::Code::Kind, v8::internal::Handle<v8::internal::Object>, int, v8::internal::MaybeHandle<v8::internal::ByteArray>, v8::internal::MaybeHandle<v8::internal::DeoptimizationData>, v8::internal::Movability, unsigned int, bool, int, int, int)
+      2    0.0%    0.0%  T v8::internal::Builtins::builtin(int)
+      2    0.0%    0.0%  T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.0%    0.0%  T _vm_read
+      2    0.0%    0.0%  T _os_unfair_lock_assert_owner
+      2    0.0%    0.0%  T _malloc
+      1    0.0%    0.0%  t void v8::internal::String::WriteToFlat<unsigned char>(v8::internal::String*, unsigned char*, int, int)
+      1    0.0%    0.0%  t void v8::internal::BodyDescriptorBase::IterateMaybeWeakPointers<v8::internal::MarkingVisitor<(v8::internal::FixedArrayVisitationMode)1, (v8::internal::TraceRetainingPathMode)1, v8::internal::IncrementalMarkingState> >(v8::internal::HeapObject*, int, int, v8::internal::MarkingVisitor<(v8::internal::FixedArrayVisitationMode)1, (v8::internal::TraceRetainingPathMode)1, v8::internal::IncrementalMarkingState>*)
+      1    0.0%    0.0%  t void std::__1::vector<v8::internal::OptimizedCompilationInfo::InlinedFunctionHolder, std::__1::allocator<v8::internal::OptimizedCompilationInfo::InlinedFunctionHolder> >::__push_back_slow_path<v8::internal::OptimizedCompilationInfo::InlinedFunctionHolder>(v8::internal::OptimizedCompilationInfo::InlinedFunctionHolder&&)
+      1    0.0%    0.0%  t v8::internal::interpreter::Bytecodes::GetOperandSize(v8::internal::interpreter::Bytecode, int, v8::internal::interpreter::OperandScale)
+      1    0.0%    0.0%  t v8::internal::interpreter::BytecodeGenerator::VisitNoStackOverflowCheck(v8::internal::AstNode*)
+      1    0.0%    0.0%  t v8::internal::compiler::RepresentationSelector::VisitNode(v8::internal::compiler::Node*, v8::internal::compiler::Truncation, v8::internal::compiler::SimplifiedLowering*)
+      1    0.0%    0.0%  t v8::internal::compiler::(anonymous namespace)::UpdateOutLiveness(v8::internal::interpreter::Bytecode, v8::internal::compiler::BytecodeLivenessState&, v8::internal::compiler::BytecodeLivenessState*, v8::internal::interpreter::BytecodeArrayAccessor const&, v8::internal::compiler::BytecodeLivenessMap const&)
+      1    0.0%    0.0%  t v8::internal::compiler::(anonymous namespace)::SourcePositionWrapper::Reduce(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  t v8::internal::ZoneList<v8::internal::GuardedAlternative>::ResizeAddInternal(v8::internal::GuardedAlternative const&, v8::internal::ZoneAllocationPolicy)
+      1    0.0%    0.0%  t v8::internal::Worklist<v8::internal::HeapObject*, 64>::Pop(int, v8::internal::HeapObject**)
+      1    0.0%    0.0%  t v8::internal::SlotSet::FreeEmptyBuckets()
+      1    0.0%    0.0%  t v8::internal::RootVisitor::Synchronize(v8::internal::VisitorSynchronization::SyncTag)
+      1    0.0%    0.0%  t v8::internal::Representation::is_more_general_than(v8::internal::Representation const&) const
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseTemplateLiteral(v8::internal::Expression*, int, bool, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseExpressionOrLabelledStatement(v8::internal::ZoneList<v8::internal::AstRawString const*>*, v8::internal::ZoneList<v8::internal::AstRawString const*>*, v8::internal::AllowLabelledFunctionStatement, bool*)
+      1    0.0%    0.0%  t v8::internal::MaybeObject** v8::internal::Deserializer<v8::internal::BuiltinDeserializerAllocator>::ReadDataCase<6, 0, 0, 0>(v8::internal::Isolate*, v8::internal::MaybeObject**, unsigned long, unsigned char, bool)
+      1    0.0%    0.0%  t v8::internal::MaybeHandle<v8::internal::JSObject> v8::internal::FixedArray::GetValue<v8::internal::JSObject>(v8::internal::Isolate*, int) const
+      1    0.0%    0.0%  t v8::internal::MarkingVisitor<(v8::internal::FixedArrayVisitationMode)1, (v8::internal::TraceRetainingPathMode)1, v8::internal::IncrementalMarkingState>::VisitEmbeddedPointer(v8::internal::Code*, v8::internal::RelocInfo*)
+      1    0.0%    0.0%  t v8::internal::MarkCompactCollector::RootMarkingVisitor::VisitRootPointer(v8::internal::Root, char const*, v8::internal::Object**)
+      1    0.0%    0.0%  t v8::internal::MarkCompactCollector::MarkingWorklist::MarkingWorklist(v8::internal::Heap*)
+      1    0.0%    0.0%  t v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInSpecialHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*)
+      1    0.0%    0.0%  t v8::internal::LocalAllocator::AllocateInLAB(int, v8::internal::AllocationAlignment)
+      1    0.0%    0.0%  t v8::internal::HeapObject::SizeFromMap(v8::internal::Map*) const
+      1    0.0%    0.0%  t v8::internal::FunctionCallbackArguments::Call(v8::internal::CallHandlerInfo*)
+      1    0.0%    0.0%  t v8::internal::EmbedderGraphImpl::V8NodeImpl::IsEmbedderNode()
+      1    0.0%    0.0%  t v8::internal::ConsString* v8::internal::String::VisitFlat<v8::internal::StringCharacterStream>(v8::internal::StringCharacterStream*, v8::internal::String*, int)
+      1    0.0%    0.0%  t v8::internal::Builtin_Impl_BooleanConstructor(v8::internal::BuiltinArguments, v8::internal::Isolate*)
+      1    0.0%    0.0%  t v8::internal::BufferedCharacterStream<v8::internal::OnHeapStream>::ReadBlock()
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::FastDoubleElementsAccessor<v8::internal::(anonymous namespace)::FastPackedDoubleElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)4> >::CopyElementsImpl(v8::internal::Isolate*, v8::internal::FixedArrayBase*, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int, int)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedDoubleElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)4> >::ConvertElementsWithCapacity(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::FixedArrayBase>, v8::internal::ElementsKind, unsigned int, unsigned int, unsigned int, int)
+      1    0.0%    0.0%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastHoleySmiElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)1> >::GetEntryForIndex(v8::internal::Isolate*, v8::internal::JSObject*, v8::internal::FixedArrayBase*, unsigned int)
+      1    0.0%    0.0%  t unsigned int v8::internal::StringHasher::HashSequentialString<unsigned char>(unsigned char const*, int, unsigned long long)
+      1    0.0%    0.0%  t std::__1::vector<v8::internal::compiler::RegisterAllocatorVerifier::InstructionConstraint, v8::internal::ZoneAllocator<v8::internal::compiler::RegisterAllocatorVerifier::InstructionConstraint> >::reserve(unsigned long)
+      1    0.0%    0.0%  t std::__1::vector<v8::internal::compiler::BranchElimination::ControlPathConditions, v8::internal::ZoneAllocator<v8::internal::compiler::BranchElimination::ControlPathConditions> >::__append(unsigned long, v8::internal::compiler::BranchElimination::ControlPathConditions const&)
+      1    0.0%    0.0%  t std::__1::vector<v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >::Error, v8::internal::ZoneAllocator<v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >::Error> >::resize(unsigned long)
+      1    0.0%    0.0%  t std::__1::__hash_table<node::worker::Worker*, std::__1::hash<node::worker::Worker*>, std::__1::equal_to<node::worker::Worker*>, std::__1::allocator<node::worker::Worker*> >::erase(std::__1::__hash_const_iterator<std::__1::__hash_node<node::worker::Worker*, void*>*>)
+      1    0.0%    0.0%  t std::__1::__deque_base<v8::internal::compiler::BasicBlock*, v8::internal::RecyclingZoneAllocator<v8::internal::compiler::BasicBlock*> >::clear()
+      1    0.0%    0.0%  t prepareMethodLists(objc_class*, method_list_t**, int, bool, bool)
+      1    0.0%    0.0%  t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  t node::Environment::StartProfilerIdleNotifier()::$_2::__invoke(uv_prepare_s*)
+      1    0.0%    0.0%  t node::EnvQuery(v8::Local<v8::Name>, v8::PropertyCallbackInfo<v8::Integer> const&)
+      1    0.0%    0.0%  t int v8::internal::BinarySearch<(v8::internal::SearchMode)1, v8::internal::DescriptorArray>(v8::internal::DescriptorArray*, v8::internal::Name*, int, int*)
+      1    0.0%    0.0%  t _update_cache_for_file_streams
+      1    0.0%    0.0%  t _u_getUnicodeProperties_63
+      1    0.0%    0.0%  t _szone_batch_free
+      1    0.0%    0.0%  t _insert_node
+      1    0.0%    0.0%  t _dyld_fast_stub_entry(void*, long)
+      1    0.0%    0.0%  t __read_images
+      1    0.0%    0.0%  t __os_unfair_lock_lock_slow
+      1    0.0%    0.0%  t __os_lock_unfair_lock
+      1    0.0%    0.0%  t ___find_warguments
+      1    0.0%    0.0%  t __CFURLCreateWithFileSystemPath
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::VisitAssignment(v8::internal::Assignment*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeGenerator::BuildVariableAssignment(v8::internal::Variable*, v8::internal::Token::Value, v8::internal::HoleCheckMode, v8::internal::LookupHoistingMode)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeDecoder::DecodeSignedOperand(unsigned long, v8::internal::interpreter::OperandType, v8::internal::interpreter::OperandScale)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayWriter::EmitBytecode(v8::internal::interpreter::BytecodeNode const*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayBuilder::BinaryOperationSmiLiteral(v8::internal::Token::Value, v8::internal::Smi*, int)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayAccessor::UpdateOperandScale()
+      1    0.0%    0.0%  T v8::internal::compiler::SpillRange::SpillRange(v8::internal::compiler::TopLevelLiveRange*, v8::internal::Zone*)
+      1    0.0%    0.0%  T v8::internal::compiler::SparseInputMaskOf(v8::internal::compiler::Operator const*)
+      1    0.0%    0.0%  T v8::internal::compiler::SourcePositionTable::SourcePositionTable(v8::internal::compiler::Graph*)
+      1    0.0%    0.0%  T v8::internal::compiler::SimplifiedOperatorReducer::Reduce(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::SimplifiedOperatorBuilder::SimplifiedOperatorBuilder(v8::internal::Zone*)
+      1    0.0%    0.0%  T v8::internal::compiler::Schedule::Schedule(v8::internal::Zone*, unsigned long)
+      1    0.0%    0.0%  T v8::internal::compiler::Schedule::EliminateNoopPhiNodes(v8::internal::compiler::BasicBlock*)
+      1    0.0%    0.0%  T v8::internal::compiler::OperatorProperties::HasContextInput(v8::internal::compiler::Operator const*)
+      1    0.0%    0.0%  T v8::internal::compiler::Operator::Operator(unsigned short, v8::base::Flags<v8::internal::compiler::Operator::Property, unsigned char>, char const*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
+      1    0.0%    0.0%  T v8::internal::compiler::ObjectData::IsHeapNumber() const
+      1    0.0%    0.0%  T v8::internal::compiler::NodeProperties::PastEffectIndex(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::NodeProperties::InferReceiverMaps(v8::internal::Isolate*, v8::internal::compiler::Node*, v8::internal::compiler::Node*, v8::internal::ZoneHandleSet<v8::internal::Map>*)
+      1    0.0%    0.0%  T v8::internal::compiler::NodeProperties::GetControlInput(v8::internal::compiler::Node*, int)
+      1    0.0%    0.0%  T v8::internal::compiler::Node::RemoveUse(v8::internal::compiler::Node::Use*)
+      1    0.0%    0.0%  T v8::internal::compiler::LoopVariableOptimizer::TakeConditionsFromFirstControl(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::LiveRangeConnector::ResolveControlFlow(v8::internal::Zone*)
+      1    0.0%    0.0%  T v8::internal::compiler::JSTypedLowering::ReduceJSCall(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::JSHeapBroker::JSHeapBroker(v8::internal::Isolate*, v8::internal::Zone*)
+      1    0.0%    0.0%  T v8::internal::compiler::JSHeapBroker::HeapObjectTypeFromMap(v8::internal::Map*) const
+      1    0.0%    0.0%  T v8::internal::compiler::JSCallReducer::ReduceJSCall(v8::internal::compiler::Node*, v8::internal::Handle<v8::internal::SharedFunctionInfo>)
+      1    0.0%    0.0%  T v8::internal::compiler::JSCallReducer::Reduce(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::InstructionSelector::IsTailCallAddressImmediate()
+      1    0.0%    0.0%  T v8::internal::compiler::GraphReducer::ReduceNode(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  T v8::internal::compiler::CompilationDependencies::Commit(v8::internal::Handle<v8::internal::Code>)
+      1    0.0%    0.0%  T v8::internal::compiler::BytecodeGraphBuilder::Environment::Checkpoint(v8::internal::BailoutId, v8::internal::compiler::OutputFrameStateCombine, v8::internal::compiler::BytecodeLivenessState const*)
+      1    0.0%    0.0%  T v8::internal::compiler::AllNodes::Mark(v8::internal::Zone*, v8::internal::compiler::Node*, v8::internal::compiler::Graph const*)
+      1    0.0%    0.0%  T v8::internal::TransitionsAccessor::Initialize()
+      1    0.0%    0.0%  T v8::internal::Strtod(v8::internal::Vector<char const>, int)
+      1    0.0%    0.0%  T v8::internal::StringToDouble(v8::internal::Isolate*, v8::internal::UnicodeCache*, v8::internal::Handle<v8::internal::String>, int, double)
+      1    0.0%    0.0%  T v8::internal::StringTable::LookupStringIfExists_NoAllocate(v8::internal::Isolate*, v8::internal::String*)
+      1    0.0%    0.0%  T v8::internal::StackFrameIteratorBase::SingletonFor(v8::internal::StackFrame::Type)
+      1    0.0%    0.0%  T v8::internal::SpaceWithLinearArea::StartNextInlineAllocationStep()
+      1    0.0%    0.0%  T v8::internal::SemiSpace::FixPagesFlags(long, long)
+      1    0.0%    0.0%  T v8::internal::Scope::LookupRecursive(v8::internal::ParseInfo*, v8::internal::VariableProxy*, v8::internal::Scope*)
+      1    0.0%    0.0%  T v8::internal::Scope::DeserializeScopeChain(v8::internal::Isolate*, v8::internal::Zone*, v8::internal::ScopeInfo*, v8::internal::DeclarationScope*, v8::internal::AstValueFactory*, v8::internal::Scope::DeserializationMode)
+      1    0.0%    0.0%  T v8::internal::Scanner::ScanString()
+      1    0.0%    0.0%  T v8::internal::Scanner::Scan()
+      1    0.0%    0.0%  T v8::internal::Runtime_StringEqual(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_RegExpInitializeAndCompile(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_PrepareElementsForSort(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_NewClosure(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_ForInEnumerate(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::RootScavengeVisitor::ScavengePointer(v8::internal::Object**)
+      1    0.0%    0.0%  T v8::internal::Relocatable::Iterate(v8::internal::Isolate*, v8::internal::RootVisitor*)
+      1    0.0%    0.0%  T v8::internal::PerIsolateAssertScope<(v8::internal::PerIsolateAssertType)0, true>::IsAllowed(v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::PauseAllocationObserversScope::PauseAllocationObserversScope(v8::internal::Heap*)
+      1    0.0%    0.0%  T v8::internal::PagedSpace::PagedSpace(v8::internal::Heap*, v8::internal::AllocationSpace, v8::internal::Executability)
+      1    0.0%    0.0%  T v8::internal::PagedSpace::AddPage(v8::internal::Page*)
+      1    0.0%    0.0%  T v8::internal::OptimizingCompileDispatcher::QueueForOptimization(v8::internal::OptimizedCompilationJob*)
+      1    0.0%    0.0%  T v8::internal::Object::OptimalType(v8::internal::Isolate*, v8::internal::Representation)
+      1    0.0%    0.0%  T v8::internal::MarkCompactCollector::RecordRelocSlot(v8::internal::Code*, v8::internal::RelocInfo*, v8::internal::Object*)
+      1    0.0%    0.0%  T v8::internal::MarkCompactCollector::EnsureSweepingCompleted()
+      1    0.0%    0.0%  T v8::internal::LookupIterator::GetDataValue() const
+      1    0.0%    0.0%  T v8::internal::Log::MessageBuilder::AppendString(v8::internal::String*, v8::base::Optional<int>)
+      1    0.0%    0.0%  T v8::internal::JSDate::CurrentTimeValue(v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::ItemParallelJob::Run(std::__1::shared_ptr<v8::internal::Counters>)
+      1    0.0%    0.0%  T v8::internal::InnerPointerToCodeCache::GetCacheEntry(unsigned long)
+      1    0.0%    0.0%  T v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const
+      1    0.0%    0.0%  T v8::internal::IdentityMapBase::Hash(v8::internal::Object*) const
+      1    0.0%    0.0%  T v8::internal::IdentityMapBase::GetEntry(v8::internal::Object*)
+      1    0.0%    0.0%  T v8::internal::Heap::OldGenerationSizeOfObjects()
+      1    0.0%    0.0%  T v8::internal::Heap::MergeAllocationSitePretenuringFeedback(std::__1::unordered_map<v8::internal::AllocationSite*, unsigned long, std::__1::hash<v8::internal::AllocationSite*>, std::__1::equal_to<v8::internal::AllocationSite*>, std::__1::allocator<std::__1::pair<v8::internal::AllocationSite* const, unsigned long> > > const&)
+      1    0.0%    0.0%  T v8::internal::Heap::CreateFillerObjectAt(unsigned long, int, v8::internal::ClearRecordedSlots, v8::internal::ClearFreedMemoryMode)
+      1    0.0%    0.0%  T v8::internal::Heap::CanExpandOldGeneration(unsigned long)
+      1    0.0%    0.0%  T v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::Rehash(v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry(v8::internal::Isolate*, v8::internal::StringTableKey*)
+      1    0.0%    0.0%  T v8::internal::GetCurrentStackPosition()
+      1    0.0%    0.0%  T v8::internal::Genesis::CreateNewGlobals(v8::Local<v8::ObjectTemplate>, v8::internal::Handle<v8::internal::JSGlobalProxy>)
+      1    0.0%    0.0%  T v8::internal::GCTracer::GCTracer(v8::internal::Heap*)
+      1    0.0%    0.0%  T v8::internal::FunctionTemplateInfo::IsTemplateFor(v8::internal::Map*)
+      1    0.0%    0.0%  T v8::internal::FuncNameInferrer::PushLiteralName(v8::internal::AstRawString const*)
+      1    0.0%    0.0%  T v8::internal::FreeList::FindNodeIn(v8::internal::FreeListCategoryType, unsigned long, unsigned long*)
+      1    0.0%    0.0%  T v8::internal::Factory::NewUncompiledDataWithoutPreParsedScope(v8::internal::Handle<v8::internal::String>, int, int, int)
+      1    0.0%    0.0%  T v8::internal::Factory::NewSharedFunctionInfo(v8::internal::MaybeHandle<v8::internal::String>, v8::internal::MaybeHandle<v8::internal::HeapObject>, int, v8::internal::FunctionKind)
+      1    0.0%    0.0%  T v8::internal::Factory::NewMap(v8::internal::InstanceType, int, v8::internal::ElementsKind, int)
+      1    0.0%    0.0%  T v8::internal::Factory::NewJSGlobalObject(v8::internal::Handle<v8::internal::JSFunction>)
+      1    0.0%    0.0%  T v8::internal::Factory::InitializeMap(v8::internal::Map*, v8::internal::InstanceType, int, v8::internal::ElementsKind, int)
+      1    0.0%    0.0%  T v8::internal::Factory::AllocateRawWithImmortalMap(int, v8::internal::PretenureFlag, v8::internal::Map*, v8::internal::AllocationAlignment)
+      1    0.0%    0.0%  T v8::internal::Deserializer<v8::internal::BuiltinDeserializerAllocator>::ReadData(v8::internal::MaybeObject**, v8::internal::MaybeObject**, int, unsigned long)
+      1    0.0%    0.0%  T v8::internal::Deserializer<v8::internal::BuiltinDeserializerAllocator>::IsLazyDeserializationEnabled() const
+      1    0.0%    0.0%  T v8::internal::DependentCode::New(v8::internal::Isolate*, v8::internal::DependentCode::DependencyGroup, v8::internal::MaybeObjectHandle, v8::internal::Handle<v8::internal::DependentCode>)
+      1    0.0%    0.0%  T v8::internal::CompilationCacheTable::Age()
+      1    0.0%    0.0%  T v8::internal::CodeStubAssembler::IsHeapNumber(v8::internal::compiler::SloppyTNode<v8::internal::HeapObject>)
+      1    0.0%    0.0%  T v8::internal::Builtin_StringPrototypeToUpperCaseIntl(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Builtin_StringPrototypeStartsWith(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Builtin_ArrayUnshift(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  T v8::internal::Assembler::pushq(v8::internal::Register)
+      1    0.0%    0.0%  T v8::internal::Assembler::bind_to(v8::internal::Label*, int)
+      1    0.0%    0.0%  T v8::internal::AllocationObserver::AllocationStep(int, unsigned long, unsigned long)
+      1    0.0%    0.0%  T v8::internal::Accessors::ErrorStackSetter(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      1    0.0%    0.0%  T std::__1::__num_get<wchar_t>::__stage2_int_loop(wchar_t, int, char*, char*&, unsigned int&, wchar_t, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned int*, unsigned int*&, wchar_t*)
+      1    0.0%    0.0%  T node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T node::NodePlatform::MonotonicallyIncreasingTime()
+      1    0.0%    0.0%  T _uv_run
+      1    0.0%    0.0%  T _os_unfair_lock_lock_with_options_4Libc
+      1    0.0%    0.0%  T _nw_endpoint_set_proxy_original_endpoint
+      1    0.0%    0.0%  T _aesni_set_encrypt_key
+      1    0.0%    0.0%  T _aesni_ecb_encrypt
+      1    0.0%    0.0%  T __swrite
+      1    0.0%    0.0%  T __pthread_qos_class_encode
+      1    0.0%    0.0%  T __kernelrpc_vm_remap
+      1    0.0%    0.0%  T __CFExecutableLinkedOnOrAfter
+      1    0.0%    0.0%  T _ERR_load_OCSP_strings
+      1    0.0%    0.0%  T _ERR_load_DH_strings
+      1    0.0%    0.0%  T _ERR_load_ASN1_strings
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1830   42.9%   43.0%  JavaScript
+   2363   55.3%   55.5%  C++
+    139    3.3%    3.3%  GC
+     12    0.3%          Shared libraries
+     65    1.5%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    548   30.6%   12.8%  T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+    420   23.5%    9.8%  T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+    417   23.3%    9.8%  T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+    257   14.4%    6.0%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     42    2.3%    1.0%  T v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+     31    1.7%    0.7%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      9    0.5%    0.2%  T v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+      8    0.4%    0.2%  T v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    0.3%    0.1%  T v8::internal::Runtime_InterpreterDeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      4    0.2%    0.1%  T v8::internal::Runtime_TransitionElementsKind(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Runtime_LoadPropertyWithInterceptor(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Runtime_DeserializeLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  T v8::internal::Builtin_DateConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  T v8::internal::Runtime_StringCharCodeAt(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  T v8::internal::Runtime_KeyedGetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  T v8::internal::Runtime_CompileOptimized_NotConcurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.0%  T v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  t void v8::internal::String::WriteToFlat<unsigned char>(v8::internal::String*, unsigned char*, int, int)
+      1    0.1%    0.0%  t unsigned int v8::internal::StringHasher::HashSequentialString<unsigned char>(unsigned char const*, int, unsigned long long)
+      1    0.1%    0.0%  T v8::internal::StringTable::LookupStringIfExists_NoAllocate(v8::internal::Isolate*, v8::internal::String*)
+      1    0.1%    0.0%  T v8::internal::Runtime_StringToNumber(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_StringEqual(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_RegExpInitializeAndCompile(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_PrepareElementsForSort(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_NotifyDeoptimized(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_NewClosure(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_LoadGlobalIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_HasProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_ForInEnumerate(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_DefineDataPropertyInLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_DefineClass(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Runtime_CreateRegExpLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_StringPrototypeToUpperCaseIntl(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_StringPrototypeStartsWith(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_BooleanConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  T v8::internal::Builtin_ArrayUnshift(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    393    9.2%  T _kpersona_get
+
+    317    7.4%  Builtin: LoadIC
+    108   34.1%    LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/min.js:52:22
+    108  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+    108  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     97   89.8%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     49   50.5%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     48   49.5%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     11   10.2%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      6   54.5%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      5   45.5%            LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+     72   22.7%    LazyCompile: *isMatrix /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/collection/isMatrix.js:9:35
+     59   81.9%      LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     31   52.5%        LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     31  100.0%          Builtin: ArrayForEach
+     31  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     28   47.5%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     21   75.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     21  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      7   25.0%          Builtin: ArrayForEach
+      7  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     12   16.7%      LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      7   58.3%        LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      7  100.0%          LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      7  100.0%            Builtin: ArrayForEach
+      5   41.7%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      5  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      5  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1    1.4%      LazyCompile: ~DenseMatrix /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/type/matrix/DenseMatrix.js:26:23
+      1  100.0%        LazyCompile: ~algorithm14 /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/type/matrix/utils/algorithm14.js:23:41
+      1  100.0%          LazyCompile: ~anyArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/arithmetic/multiply.js:115:36
+      1  100.0%            LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     69   21.8%    LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/max.js:52:22
+     69  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     69  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     60   87.0%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     31   51.7%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     29   48.3%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      9   13.0%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      5   55.6%            LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      4   44.4%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     34   10.7%    LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     34  100.0%      Builtin: ArrayForEach
+     34  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     34  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     34  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     29    9.1%    LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     25   86.2%      LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     25  100.0%        LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     25  100.0%          LazyCompile: ~listOnTimeout timers.js:276:23
+     25  100.0%            LazyCompile: *processTimers timers.js:256:23
+      3   10.3%      Builtin: ArrayForEach
+      3  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1    3.4%      LazyCompile: ~Array /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/type/matrix/function/matrix.js:46:28
+      1  100.0%        LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      1  100.0%          LazyCompile: ~ArrayArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/arithmetic/add.js:65:40
+      1  100.0%            LazyCompile: *CObject.move /Users/fischer/work/adafruit/suncontrol/node/objects.js:55:34
+
+    101    2.4%  LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     51   50.5%    LazyCompile: *ArrayArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:115:40
+     27   52.9%      LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     27  100.0%        Builtin: ArrayForEach
+     27  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     27  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     21   41.2%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     17   81.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     17  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     17  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+      4   19.0%        Builtin: ArrayForEach
+      4  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3    5.9%      LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      3  100.0%        LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      3  100.0%          Builtin: ArrayForEach
+      3  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     26   25.7%    LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     26  100.0%      Builtin: ArrayForEach
+     26  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     26  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     26  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     21   20.8%    LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     13   61.9%      LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     13  100.0%        LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     13  100.0%          LazyCompile: ~listOnTimeout timers.js:276:23
+     13  100.0%            LazyCompile: *processTimers timers.js:256:23
+      8   38.1%      Builtin: ArrayForEach
+      8  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      8  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      8  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      2    2.0%    LazyCompile: ~CObject.move /Users/fischer/work/adafruit/suncontrol/node/objects.js:55:34
+      2  100.0%      LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:66:30
+      2  100.0%        Builtin: ArrayForEach
+      2  100.0%          LazyCompile: ~update_world /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:57:22
+      2  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+
+    100    2.3%  LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/max.js:52:22
+    100  100.0%    LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+    100  100.0%      LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     90   90.0%        LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     49   54.4%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     36   73.5%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     13   26.5%            Builtin: ArrayForEach
+     41   45.6%          LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     41  100.0%            Builtin: ArrayForEach
+     10   10.0%        LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      6   60.0%          LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      6  100.0%            LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      4   40.0%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+
+     98    2.3%  LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/min.js:52:22
+     98  100.0%    LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     98  100.0%      LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     89   90.8%        LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     50   56.2%          LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     50  100.0%            Builtin: ArrayForEach
+     39   43.8%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     32   82.1%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      7   17.9%            Builtin: ArrayForEach
+      9    9.2%        LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      6   66.7%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      6  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3   33.3%          LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      3  100.0%            LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+
+     89    2.1%  t node::fs::Read(v8::FunctionCallbackInfo<v8::Value> const&)
+     89  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     89  100.0%      LazyCompile: ~readSync fs.js:490:18
+     89  100.0%        LazyCompile: ~tryReadSync fs.js:333:21
+     89  100.0%          LazyCompile: ~readFileSync fs.js:345:22
+     88   98.9%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:747:37
+      1    1.1%            LazyCompile: ~OPC.loadModel /Users/fischer/work/adafruit/suncontrol/node/opc.js:159:25
+
+     88    2.1%  Builtin: ArrayPrototypeSlice
+     88  100.0%    LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     88  100.0%      LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     79   89.8%        LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     41   51.9%          LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     41  100.0%            Builtin: ArrayForEach
+     38   48.1%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     29   76.3%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      9   23.7%            Builtin: ArrayForEach
+      9   10.2%        LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      5   55.6%          LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      5  100.0%            LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      4   44.4%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+
+     87    2.0%  T v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::Heap::RootListIndex, int, v8::internal::Object*, v8::internal::PretenureFlag)
+     43   49.4%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     43  100.0%      Builtin: ArrayPrototypeSlice
+     43  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     43  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     40   93.0%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      3    7.0%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+     42   48.3%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     42  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     42  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     38   90.5%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     21   55.3%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     17   44.7%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      4    9.5%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      2   50.0%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      2   50.0%            LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      1    1.1%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~createPool buffer.js:121:20
+      1  100.0%        Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%          LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:182:29
+
+     83    1.9%  LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     73   88.0%    LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     37   50.7%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     24   64.9%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     24  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     24  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+     13   35.1%        Builtin: ArrayForEach
+     13  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     13  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     35   47.9%      LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     35  100.0%        Builtin: ArrayForEach
+     35  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     35  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1    1.4%      LazyCompile: ~CObject.move /Users/fischer/work/adafruit/suncontrol/node/objects.js:55:34
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:66:30
+      1  100.0%          Builtin: ArrayForEach
+      1  100.0%            LazyCompile: ~update_world /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:57:22
+     10   12.0%    LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      7   70.0%      LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      7  100.0%        LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      7  100.0%          Builtin: ArrayForEach
+      7  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3   30.0%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      3  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+
+     82    1.9%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     33   40.2%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     33  100.0%      Builtin: ArrayPrototypeSlice
+     33  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     33  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     30   90.9%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      3    9.1%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+     33   40.2%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     33  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     33  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     24   72.7%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     14   58.3%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     10   41.7%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      9   27.3%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      5   55.6%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4   44.4%            LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+     12   14.6%    T v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      9   75.0%      LazyCompile: *isMatrix /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/collection/isMatrix.js:9:35
+      8   88.9%        LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      6   75.0%          LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      6  100.0%            Builtin: ArrayForEach
+      2   25.0%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1   50.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1   50.0%            Builtin: ArrayForEach
+      1   11.1%        LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      1  100.0%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3   25.0%      LazyCompile: *_ /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/statistics/min.js:52:22
+      3  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+      3  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+      3  100.0%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      2    2.4%    T v8::internal::Runtime_StringCharCodeAt(int, v8::internal::Object**, v8::internal::Isolate*)
+      2  100.0%      LazyCompile: *normalizeString path.js:52:25
+      1   50.0%        LazyCompile: ~resolve path.js:1068:28
+      1  100.0%          LazyCompile: ~Module._resolveLookupPaths internal/modules/cjs/loader.js:429:38
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:579:35
+      1   50.0%        LazyCompile: *realpathSync fs.js:1395:22
+      1  100.0%          LazyCompile: ~toRealPath internal/modules/cjs/loader.js:214:20
+      1  100.0%            LazyCompile: ~tryFile internal/modules/cjs/loader.js:206:17
+      1    1.2%    T v8::internal::Runtime_TransitionElementsKind(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      1  100.0%        Builtin: ArrayForEach
+      1  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1    1.2%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~createWriteWrap internal/stream_base_commons.js:78:25
+      1  100.0%        LazyCompile: ~Socket._writeGeneric net.js:695:42
+      1  100.0%          LazyCompile: ~Socket._write net.js:732:35
+      1  100.0%            LazyCompile: ~doWrite _stream_writable.js:405:17
+
+     79    1.9%  T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     79  100.0%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     79  100.0%      Builtin: ArrayPrototypeSlice
+     78   98.7%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     77   98.7%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     73   94.8%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      4    5.2%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      1    1.3%          LazyCompile: ~generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+      1  100.0%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      1    1.3%        LazyCompile: ~distribution /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/probability/distribution.js:42:24
+      1  100.0%          LazyCompile: ~factory /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/probability/random.js:3:17
+      1  100.0%            LazyCompile: ~load /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/core/core.js:92:16
+
+     72    1.7%  Builtin: ArgumentsAdaptorTrampoline
+     40   55.6%    LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     37   92.5%      LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     20   54.1%        LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     20  100.0%          Builtin: ArrayForEach
+     20  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     17   45.9%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     15   88.2%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     15  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      2   11.8%          Builtin: ArrayForEach
+      2  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3    7.5%      LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      3  100.0%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     19   26.4%    LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     12   63.2%      LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     12  100.0%        Builtin: ArrayForEach
+     12  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     12  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      7   36.8%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      7  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      7  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      7  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+      5    6.9%    LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      3   60.0%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      3  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+      2   40.0%      LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      2  100.0%        LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      2  100.0%          Builtin: ArrayForEach
+      2  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3    4.2%    LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      2   66.7%      LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      2  100.0%        LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      2  100.0%          LazyCompile: ~listOnTimeout timers.js:276:23
+      2  100.0%            LazyCompile: *processTimers timers.js:256:23
+      1   33.3%      Builtin: ArrayForEach
+      1  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      3    4.2%    LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      3  100.0%      Builtin: ArrayForEach
+      3  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1    1.4%    Builtin: ArrayForEach
+      1  100.0%      LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+
+     66    1.5%  T v8::internal::ElementsAccessor::Concat(v8::internal::Isolate*, v8::internal::Arguments*, unsigned int, unsigned int)
+     66  100.0%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     65   98.5%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     65  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     58   89.2%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     32   55.2%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     26   44.8%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      7   10.8%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      4   57.1%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3   42.9%            LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      1    1.5%      LazyCompile: ~preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+      1  100.0%        LazyCompile: ~generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+      1  100.0%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      1  100.0%            LazyCompile: ~ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+
+     65    1.5%  UNKNOWN
+      1    1.5%    T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1  100.0%        LazyCompile: ~listOnTimeout timers.js:276:23
+      1  100.0%          LazyCompile: ~processTimers timers.js:256:23
+
+     64    1.5%  T v8::internal::Factory::InitializeJSObjectFromMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Map>)
+     46   71.9%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     46  100.0%      Builtin: ArrayPrototypeSlice
+     46  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     46  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     41   89.1%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      5   10.9%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+     17   26.6%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     17  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     17  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     15   88.2%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      8   53.3%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      7   46.7%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      2   11.8%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      2  100.0%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1    1.6%    T v8::internal::Builtin_DateConstructor(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1  100.0%        LazyCompile: ~listOnTimeout timers.js:276:23
+      1  100.0%          LazyCompile: *processTimers timers.js:256:23
+
+     61    1.4%  LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     61  100.0%    LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     52   85.2%      LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     26   50.0%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     21   80.8%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     21  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      5   19.2%          Builtin: ArrayForEach
+      5  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     26   50.0%        LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     26  100.0%          Builtin: ArrayForEach
+     26  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      9   14.8%      LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      6   66.7%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      6  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      6  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      3   33.3%        LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      3  100.0%          LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      3  100.0%            Builtin: ArrayForEach
+
+     59    1.4%  t v8::internal::(anonymous namespace)::CopyObjectToObjectElements(v8::internal::Isolate*, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int)
+     48   81.4%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     48  100.0%      Builtin: ArrayPrototypeSlice
+     48  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     48  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     43   89.6%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      5   10.4%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+     11   18.6%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     11  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     11  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     10   90.9%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      6   60.0%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4   40.0%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      1    9.1%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      1  100.0%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+
+     57    1.3%  Builtin: CallFunction_ReceiverIsAny
+     17   29.8%    LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     17  100.0%      LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     14   82.4%        LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      8   57.1%          LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      8  100.0%            Builtin: ArrayForEach
+      6   42.9%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      6  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3   17.6%        LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      2   66.7%          LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      2  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1   33.3%          LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      1  100.0%            LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     15   26.3%    LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     11   73.3%      LazyCompile: *ArrayArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:115:40
+      7   63.6%        LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      7  100.0%          Builtin: ArrayForEach
+      7  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4   36.4%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      4  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      2   13.3%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      2  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      2  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      2  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+      1    6.7%      LazyCompile: ~_distance3d /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:323:23
+      1  100.0%        LazyCompile: ~ArrayArray /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/function/geometry/distance.js:115:40
+      1  100.0%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      1  100.0%            LazyCompile: ~CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      1    6.7%      LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      1  100.0%        Builtin: ArrayForEach
+      1  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      6   10.5%    LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3   50.0%      LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%        LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      3  100.0%          LazyCompile: ~listOnTimeout timers.js:276:23
+      3  100.0%            LazyCompile: *processTimers timers.js:256:23
+      3   50.0%      Builtin: ArrayForEach
+      3  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      4    7.0%    LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+      3   75.0%      LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      2   66.7%        LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1   50.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1   50.0%          Builtin: ArrayForEach
+      1  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1   33.3%        LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      1  100.0%          Builtin: ArrayForEach
+      1  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1   25.0%      LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      1  100.0%        LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      1  100.0%          LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      1  100.0%            Builtin: ArrayForEach
+      4    7.0%    LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      4  100.0%      Builtin: ArrayForEach
+      4  100.0%        LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4  100.0%          LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      4  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1    1.8%    LazyCompile: ~strEscape internal/util/inspect.js:258:19
+      1  100.0%      LazyCompile: ~formatPrimitive internal/util/inspect.js:816:25
+      1  100.0%        LazyCompile: ~formatValue internal/util/inspect.js:488:21
+      1  100.0%          LazyCompile: ~inspect internal/util/inspect.js:156:17
+      1  100.0%            LazyCompile: ~formatWithOptions util.js:75:27
+      1    1.8%    LazyCompile: ~readFileSync fs.js:345:22
+      1  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:747:37
+      1  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:622:33
+      1  100.0%          LazyCompile: ~tryModuleLoad internal/modules/cjs/loader.js:567:23
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:534:24
+      1    1.8%    LazyCompile: ~getColorDepth internal/tty.js:70:23
+      1  100.0%      LazyCompile: ~Console.(anonymous function) internal/console/constructor.js:253:49
+      1  100.0%        LazyCompile: ~Console.(anonymous function) internal/console/constructor.js:272:47
+      1  100.0%          LazyCompile: ~log internal/console/constructor.js:282:37
+      1  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%    LazyCompile: ~afterWriteDispatched internal/stream_base_commons.js:120:30
+      1  100.0%      LazyCompile: ~writeGeneric internal/stream_base_commons.js:114:22
+      1  100.0%        LazyCompile: ~Socket._writeGeneric net.js:695:42
+      1  100.0%          LazyCompile: ~Socket._write net.js:732:35
+      1  100.0%            LazyCompile: ~doWrite _stream_writable.js:405:17
+      1    1.8%    LazyCompile: ~_onceWrap events.js:289:19
+      1  100.0%      LazyCompile: ~once events.js:297:44
+      1  100.0%        LazyCompile: ~Console.(anonymous function) internal/console/constructor.js:213:46
+      1  100.0%          LazyCompile: ~log internal/console/constructor.js:282:37
+      1  100.0%            t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    1.8%    LazyCompile: ~TickObject internal/process/next_tick.js:87:14
+      1  100.0%      LazyCompile: ~nextTick internal/process/next_tick.js:109:18
+      1  100.0%        LazyCompile: ~onwrite _stream_writable.js:450:17
+      1  100.0%          LazyCompile: ~afterWriteDispatched internal/stream_base_commons.js:120:30
+      1  100.0%            LazyCompile: ~writeGeneric internal/stream_base_commons.js:114:22
+      1    1.8%    LazyCompile: ~OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      1  100.0%      LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1  100.0%        LazyCompile: ~listOnTimeout timers.js:276:23
+      1  100.0%          LazyCompile: ~processTimers timers.js:256:23
+      1    1.8%    LazyCompile: ~Module.load internal/modules/cjs/loader.js:622:33
+      1  100.0%      LazyCompile: ~tryModuleLoad internal/modules/cjs/loader.js:567:23
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:534:24
+      1  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:661:36
+      1  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:17:19
+      1    1.8%    LazyCompile: ~Console.(anonymous function) internal/console/constructor.js:253:49
+      1  100.0%      LazyCompile: ~Console.(anonymous function) internal/console/constructor.js:272:47
+      1  100.0%        LazyCompile: ~log internal/console/constructor.js:282:37
+      1  100.0%          t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%            LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1    1.8%    LazyCompile: ~Console.(anonymous function) internal/console/constructor.js:213:46
+      1  100.0%      LazyCompile: ~log internal/console/constructor.js:282:37
+      1  100.0%        t node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      1  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+      1    1.8%    LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      1  100.0%      LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      1  100.0%        LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      1  100.0%          Builtin: ArrayForEach
+      1  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+
+     53    1.2%  T node::contextify::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     53  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     53  100.0%      LazyCompile: ~Script vm.js:48:14
+     53  100.0%        LazyCompile: ~createScript vm.js:265:22
+     53  100.0%          LazyCompile: ~runInThisContext vm.js:310:26
+     53  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:687:37
+
+     52    1.2%  t v8::internal::JSSloppyArgumentsObject::GetSloppyArgumentsLength(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, int*)
+     52  100.0%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     52  100.0%      Builtin: ArrayPrototypeSlice
+     52  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     52  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     45   86.5%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      7   13.5%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+
+     50    1.2%  t v8::internal::(anonymous namespace)::Fast_ArrayConcat(v8::internal::Isolate*, v8::internal::BuiltinArguments*)
+     50  100.0%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     50  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     49   98.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     42   85.7%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     27   64.3%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     15   35.7%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      7   14.3%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      4   57.1%            LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      3   42.9%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      1    2.0%        LazyCompile: ~generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+      1  100.0%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      1  100.0%            LazyCompile: ~ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+
+     49    1.1%  T node::native_module::NativeModuleLoader::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     49  100.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     49  100.0%      LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+     49  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:182:29
+      8   16.3%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      6   12.2%          Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      6  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      5   10.2%          Eval: ~<anonymous> stream.js:1:1
+      5  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      4    8.2%          Eval: ~<anonymous> buffer.js:1:1
+      4  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      3    6.1%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:534:24
+      3  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:661:36
+      3    6.1%          Eval: ~<anonymous> internal/util.js:1:1
+      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      3    6.1%          Eval: ~<anonymous> internal/process/execution.js:1:1
+      3  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      2    4.1%          LazyCompile: ~setupGlobalURL internal/bootstrap/node.js:511:24
+      2  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    4.1%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:463:21
+      2  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    4.1%          LazyCompile: ~loadPreloadModules internal/bootstrap/pre_execution.js:138:28
+      2  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:5:36
+      1    2.0%          LazyCompile: ~setupProcessObject internal/bootstrap/node.js:390:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.0%          LazyCompile: ~setupGlobalTimeouts internal/bootstrap/node.js:475:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.0%          LazyCompile: ~setupGlobalConsole internal/bootstrap/node.js:485:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.0%          LazyCompile: ~lookupAndConnect net.js:920:26
+      1  100.0%            LazyCompile: ~Socket.connect net.js:864:36
+      1    2.0%          LazyCompile: ~createWritableStdioStream internal/process/stdio.js:136:35
+      1  100.0%            LazyCompile: ~getStdout internal/process/stdio.js:12:21
+      1    2.0%          Eval: ~<anonymous> util.js:1:1
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      1    2.0%          Eval: ~<anonymous> timers.js:1:1
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      1    2.0%          Eval: ~<anonymous> internal/process/per_thread.js:1:1
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      1    2.0%          Eval: ~<anonymous> internal/process/next_tick.js:1:1
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      1    2.0%          Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+      1    2.0%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:291:42
+
+     49    1.1%  LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     38   77.6%    LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     38  100.0%      LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     38  100.0%        LazyCompile: ~listOnTimeout timers.js:276:23
+     38  100.0%          LazyCompile: *processTimers timers.js:256:23
+     11   22.4%    Builtin: ArrayForEach
+     11  100.0%      LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     11  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     11  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     11  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+
+     48    1.1%  t v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedObjectElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)2> >::Slice(v8::internal::Handle<v8::internal::JSObject>, unsigned int, unsigned int)
+     48  100.0%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     48  100.0%      Builtin: ArrayPrototypeSlice
+     48  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     48  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     42   87.5%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      6   12.5%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+
+     47    1.1%  T v8::internal::Factory::NewJSArrayStorage(v8::internal::Handle<v8::internal::JSArray>, int, int, v8::internal::ArrayStorageAllocationMode)
+     28   59.6%    T v8::internal::Runtime_TrySliceSimpleNonFastElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     28  100.0%      Builtin: ArrayPrototypeSlice
+     28  100.0%        LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     28  100.0%          LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     25   89.3%            LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+      3   10.7%            LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+     19   40.4%    T v8::internal::Builtin_ArrayConcat(int, v8::internal::Object**, v8::internal::Isolate*)
+     19  100.0%      LazyCompile: *preprocessRestParams /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:780:54
+     19  100.0%        LazyCompile: *generic /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1068:37
+     17   89.5%          LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     10   58.8%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      7   41.2%            LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      2   10.5%          LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      2  100.0%            LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+
+     46    1.1%  LazyCompile: *isMatrix /Users/fischer/work/adafruit/suncontrol/node/node_modules/mathjs/lib/utils/collection/isMatrix.js:9:35
+     38   82.6%    LazyCompile: *fn /Users/fischer/work/adafruit/suncontrol/node/node_modules/typed-function/typed-function.js:1082:27
+     20   52.6%      LazyCompile: *<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+     20  100.0%        Builtin: ArrayForEach
+     20  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     20  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     18   47.4%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+     14   77.8%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+     14  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+     14  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+      4   22.2%        Builtin: ArrayForEach
+      4  100.0%          LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      4  100.0%            LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      8   17.4%    LazyCompile: *ColorUtils.clamp /Users/fischer/work/adafruit/suncontrol/node/color_utils.js:19:29
+      5   62.5%      LazyCompile: *CObject.draw /Users/fischer/work/adafruit/suncontrol/node/objects.js:68:34
+      5  100.0%        LazyCompile: ~<anonymous> /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:95:40
+      5  100.0%          Builtin: ArrayForEach
+      5  100.0%            LazyCompile: ~shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3   37.5%      LazyCompile: *shader /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:92:20
+      3  100.0%        LazyCompile: *OPC.mapPixels /Users/fischer/work/adafruit/suncontrol/node/opc.js:86:35
+      3  100.0%          LazyCompile: ~draw /Users/fischer/work/adafruit/suncontrol/node/suncontrol.js:86:14
+      3  100.0%            LazyCompile: ~listOnTimeout timers.js:276:23
+
