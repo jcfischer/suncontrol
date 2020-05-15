@@ -2,7 +2,7 @@
 
 var OPC = new require('./opc');
 var model = OPC.loadModel(process.argv[2] || '../layouts/grid32x16z.json');
-var client = new OPC('localhost', 7890);
+var client = new OPC('192.168.1.54', 7890);
 
 
 const CObject = new require('./objects/objects.js');
@@ -79,15 +79,15 @@ function chooseShape(world) {
     let julia_present = julia_objects.length > 0;
     let particles_present = particle_objects.length > 0;
 
-    if (!julia_present  && Math.random() > 0.98) {
+    if (!julia_present && !particles_present  && Math.random() > 0.99) {
         console.log("spawning Julia Set");
         obj = new JuliaSet({zoom: zoom, animate: animate});
-    } else if (!particles_present  && Math.random() > 0.98 ) {
+    } else if (!particles_present && !julia_present && Math.random() > 0.99 ) {
         console.log("spawning particle trails");
         obj = new ParticleTrails();
-    } else if (Math.random() > 0.3) {
+    } else if (Math.random() > 0.6) {
         obj = new ExpandingBall();
-    } else if (Math.random() > 0.4) {
+    } else if (Math.random() > 0.8) {
         obj = new ExpandingRing();
     } else {
         obj = null;
@@ -100,7 +100,7 @@ function update_world(t) {
     let delta_t = t - last_time;
     // console.log("update:", delta_t);
     world.time = t;
-    world.hue = (world.hue += 0.001) % 1;
+    world.hue = (world.hue += 0.0005) % 1;
 
     let objects = world['objects'];
 
@@ -114,7 +114,7 @@ function update_world(t) {
 
     if (new_objects.length < 7 && Math.random() > 0.95) {
         let obj = chooseShape(world);
-        world.hue += 0.05;
+        world.hue += 0.025;
         if (obj) {
             console.log('new', obj.name);
             obj.init_random({boundary: world['boundary'], primary: world.hue});
