@@ -2,7 +2,7 @@
   "name": "fadecandy-examples-node",
   "dependencies": {
     "flags": "~0.1.1",
-    "mathjs": "~5.5.0",
+    "mathjs": "~7.5.1",
     "midi": "~0.9.5",
     "minimist": "~0.0.8",
     "simplex-noise": "~2.1.1"
